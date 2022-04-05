@@ -23,7 +23,7 @@ function App(): JSX.Element {
     try{
       fetch('https://jifmguoil3.execute-api.ap-southeast-1.amazonaws.com/dev/products?pageNumber=1')
       .then(res => res.json())
-      .then(data => dispatch({ type: "ADD_INITIAL_ITEMS", payload: data.products }))
+      .then(data => dispatch({ type: "ADD_INITIAL_ITEMS", payload: data.data.products }))
     }catch(err){
       dispatch({ type: "ERROR" })
     }

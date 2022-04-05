@@ -18,7 +18,7 @@ export const Product: React.FC<PageProps> = (): JSX.Element => {
         .then((res) => res.json())
         .then((data) => { 
           dispatch({ type: "SEARCH"})
-          dispatch({ type: "INITIAL_ITEM", payload: data })
+          dispatch({ type: "INITIAL_ITEM", payload: data.data })
         });
         
     } catch (err) {
